@@ -30,7 +30,7 @@
 <body>
 <div class="lang-switch"><a href="privacy-zh.html">中文 →</a></div>
 <h1>UV Health Privacy Policy</h1>
-<p class="meta"><strong>Effective Date:</strong> July 1, 2026<br><strong>Last Updated:</strong> July 1, 2026</p>
+<p class="meta"><strong>Effective Date:</strong> October 7, 2026<br><strong>Last Updated:</strong> October 7, 2026<br><strong>First Published:</strong> July 1, 2026</p>
 
 <p>UV Health ("the App", "we", "us") is developed by Tingwei Zhang MD. We respect and protect your privacy. This policy explains what information the App collects, how it's used, and your rights.</p>
 
@@ -44,21 +44,35 @@
 <li><strong>Scalp exposure level</strong> — for Solar Window Hypothesis calculations</li>
 <li><strong>Photosensitive medication status</strong> — for safety alerts</li>
 <li><strong>Daily vitamin D target (IU)</strong> — for timer goals</li>
-<li><strong>Notification and language preferences</strong></li>
+<li><strong>Notification, language and anonymous-analytics preferences</strong></li>
 <li><strong>Timer session data</strong> (start time, elapsed time) — for session recovery</li>
+<li><strong>Personal sun history</strong> — a record of each timed session of 1 minute or longer (date and time, duration, the skin type and exposed area used, UV index, estimated vitamin D) and each day's UV conditions (location rounded to about 1 degree of latitude/longitude, roughly 100 km) — so you can look back at your own sun exposure and trends in the App</li>
 </ul>
-<p><strong>Important: All of this data is stored only on your device. It is never uploaded to our servers and is never shared with any third party.</strong> Uninstalling the App permanently deletes all of this data.</p>
+<p><strong>Important: All of this data is stored only on your device. It is never uploaded to our servers and is never shared with any third party.</strong> You can delete your sun history at any time with "Clear history on this phone" in "Settings &amp; About"; uninstalling the App permanently deletes all of this data. If you use a system backup (such as iCloud Backup), this local data may be included in your own backup along with other app data.</p>
 
 <h3>1.2 Information Automatically Collected (for Real-Time UV Lookup)</h3>
 <ul>
 <li><strong>Location (latitude/longitude or city)</strong>: used to query the real-time UV index for your area. With each query, only coordinates are sent to our backend (Vercel) and our UV data provider (OpenUV.io). <strong>We do not store your location history.</strong></li>
 </ul>
 
-<h3>1.3 Information We Do NOT Collect</h3>
+<h3>1.3 Anonymous Usage Analytics (You Can Turn This Off)</h3>
+<p>To learn which features are useful and what needs improvement, the App uses Aptabase (aptabase.com) for anonymous usage analytics.</p>
+<p><strong>What is sent:</strong></p>
+<ul>
+<li>The event name, limited to: app opened, Home viewed, My Conditions viewed, conditions saved (without what you chose), Timer viewed, timer started, a timer session ended (only how it ended: paused / completed / reset), and full-day forecast expanded</li>
+<li>The time of the event and a random session number kept only in memory (it changes when the App is closed or after a period of inactivity)</li>
+<li>The App version, the phone's operating system name and version, the device model, and the phone's language/region setting</li>
+<li>Approximate country/region, derived by Aptabase's server from the IP address of the connection — <strong>the IP address itself is not stored</strong></li>
+</ul>
+<p><strong>What is never sent:</strong> your skin type, clothing and exposed body area, hair/scalp choice, photosensitizing medication, vitamin D values, sun time, burn estimates, your coordinates or chosen city, name, email, advertising identifier (IDFA), or device identifier.</p>
+<p><strong>How Aptabase handles it:</strong> Visitors are distinguished by a hash of the IP address, user agent and a random value that changes every day, so the same person cannot be followed from one day to the next. Data is stored in Aptabase's United States data center and kept for up to 5 years. We do not use this data for advertising, do not sell it, and do not combine it with other data to identify you.</p>
+<p><strong>How to turn it off:</strong> Tap the gear at the top right of any screen → "Settings &amp; About" → switch off "Anonymous usage analytics". It takes effect immediately and nothing further is sent.</p>
+
+<h3>1.4 Information We Do NOT Collect</h3>
 <ul>
 <li>❌ We do not collect names, emails, phone numbers, accounts, or passwords</li>
 <li>❌ We do not collect device identifiers or advertising IDs</li>
-<li>❌ We do not use third-party analytics (Google Analytics, Firebase, etc.)</li>
+<li>❌ We do not use analytics that identify or track individuals (such as Google Analytics or Firebase Analytics); we only use the anonymous usage analytics described in 1.3, which you can turn off</li>
 <li>❌ We do not show advertisements or share data with advertisers</li>
 <li>❌ We do not track your activity across other apps or websites</li>
 </ul>
@@ -73,24 +87,26 @@
 </ul>
 
 <h2>3. Third-Party Services</h2>
-<p>The App uses the following third-party services for core functionality:</p>
+<p>The App uses the following third-party services:</p>
 <table>
 <tr><th>Service</th><th>Purpose</th><th>Data Received</th></tr>
 <tr><td>OpenUV.io</td><td>Real-time UV index data</td><td>Your coordinates</td></tr>
-<tr><td>Vercel</td><td>Backend hosting & UV caching</td><td>Your coordinates</td></tr>
+<tr><td>Vercel</td><td>Backend hosting &amp; UV caching</td><td>Your coordinates</td></tr>
+<tr><td>Aptabase</td><td>Anonymous usage analytics (can be turned off in the App)</td><td>Event name and time, random session number, App version, OS name and version, device model, language/region setting; no location or health data</td></tr>
 </table>
 <p>We encourage you to review these services' privacy policies.</p>
 
 <h2>4. Data Security</h2>
 <ul>
 <li>All personal data on your device is protected by iOS/Android system-level security</li>
-<li>All communication with our backend uses HTTPS encryption</li>
+<li>All communication with our backend and with the analytics service uses HTTPS encryption</li>
 <li>We do not retain location queries — coordinates are discarded immediately after each lookup</li>
 </ul>
 
 <h2>5. Your Rights</h2>
 <ul>
-<li><strong>Access & Delete</strong>: You can view and modify all local data at any time on the "My Conditions" page. Uninstalling the App permanently deletes all local data.</li>
+<li><strong>Access &amp; Delete</strong>: You can view and change your settings at any time on the "My Conditions" page, and clear your sun history in "Settings &amp; About". Uninstalling the App permanently deletes all local data.</li>
+<li><strong>Turn Off Anonymous Analytics</strong>: Switch off "Anonymous usage analytics" in "Settings &amp; About". It takes effect immediately.</li>
 <li><strong>Revoke Permissions</strong>: You can disable location, notification, or HealthKit access anytime in your device settings.</li>
 <li><strong>Contact Us</strong>: For any privacy concerns, email <a href="mailto:wuyang20200000@gmail.com">wuyang20200000@gmail.com</a></li>
 </ul>
@@ -100,6 +116,7 @@
 
 <h2>7. Changes to This Policy</h2>
 <p>If we make material changes, we will notify you in the App and update the "Last Updated" date above.</p>
+<p>Change log: October 7, 2026 — added "Anonymous Usage Analytics" and "Personal sun history (stored only on your device)".</p>
 
 <h2>8. Contact</h2>
 <p>For any questions about this Privacy Policy, contact:</p>
