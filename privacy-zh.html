@@ -27,35 +27,6 @@
   .lang-switch a { background: #FFB84D; color: #fff; padding: 6px 14px; border-radius: 4px; text-decoration: none; font-size: 14px; }
 </style>
 </head>
-<body><!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>紫外线健康助手 隐私政策</title>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-    max-width: 720px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.7;
-    color: #1a1a1a;
-    background: #fff;
-  }
-  h1 { color: #E8851A; border-bottom: 2px solid #FFB84D; padding-bottom: 10px; }
-  h2 { color: #333; margin-top: 30px; }
-  h3 { color: #555; }
-  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-  th { background: #FFF4E6; }
-  .meta { color: #888; font-size: 14px; margin-bottom: 30px; }
-  .disclaimer { background: #FFF4E6; border-left: 4px solid #E8851A; padding: 15px; margin-top: 40px; border-radius: 4px; }
-  a { color: #E8851A; }
-  .lang-switch { text-align: right; margin-bottom: 20px; }
-  .lang-switch a { background: #FFB84D; color: #fff; padding: 6px 14px; border-radius: 4px; text-decoration: none; font-size: 14px; }
-</style>
-</head>
 <body>
 <div class="lang-switch"><a href="privacy-en.html">English →</a></div>
 <h1>紫外线健康助手 隐私政策</h1>
@@ -146,89 +117,6 @@
 <h2>七、政策变更</h2>
 <p>如本政策有重大变更，我们会在应用内通知您，并更新本页面顶部的"最后更新"日期。</p>
 <p>变更记录：2026 年 10 月 7 日，新增"匿名使用分析"和"个人日晒历史（只存于本机）"的说明。</p>
-
-<h2>八、联系方式</h2>
-<p>如对本隐私政策有任何疑问，请联系：</p>
-<p><strong>开发者：</strong>Tingwei Zhang MD<br><strong>邮箱：</strong><a href="mailto:wuyang20200000@gmail.com">wuyang20200000@gmail.com</a></p>
-
-<div class="disclaimer">
-本应用提供的所有信息仅供参考，不构成医疗诊断或治疗建议。如有健康问题，请咨询专业医生。
-</div>
-</body>
-</html>
-
-<div class="lang-switch"><a href="privacy-en.html">English →</a></div>
-<h1>紫外线健康助手 隐私政策</h1>
-<p class="meta"><strong>生效日期：</strong>2026 年 7 月 1 日<br><strong>最后更新：</strong>2026 年 7 月 1 日</p>
-
-<p>紫外线健康助手（"本应用"、"我们"）由 Tingwei Zhang MD 开发。我们尊重并保护用户的隐私。本政策说明本应用收集哪些信息、如何使用、以及您拥有的权利。</p>
-
-<h2>一、我们收集的信息</h2>
-
-<h3>1. 您主动提供的信息（仅存于您的设备本地）</h3>
-<p>为了给您计算个性化的日晒建议，本应用会保存以下信息<strong>仅在您的设备本地</strong>（通过 iOS / Android 的本地存储 AsyncStorage 实现）：</p>
-<ul>
-<li><strong>皮肤分型（Fitzpatrick 类型）</strong>：用于估算红斑阈值</li>
-<li><strong>身体暴露面积（BSA）和服装选择</strong>：用于估算维生素D合成</li>
-<li><strong>头皮暴露分级</strong>：用于太阳窗假说相关计算</li>
-<li><strong>光敏药物使用状态</strong>：用于安全提醒</li>
-<li><strong>维生素D每日目标摄入量</strong>：用于计时器目标设定</li>
-<li><strong>通知开关、语言偏好</strong>：用于个性化设置</li>
-<li><strong>日晒计时记录</strong>（开始时间、累积时长）：用于会话恢复</li>
-</ul>
-<p><strong>重要：以上所有数据仅存储在您的设备本地，从不上传至我们的服务器，也不与任何第三方共享。</strong> 删除应用即可永久删除全部数据。</p>
-
-<h3>2. 自动获取的信息（仅用于实时 UV 查询）</h3>
-<ul>
-<li><strong>地理位置（经纬度或城市）</strong>：用于查询您所在位置的实时 UV 指数。每次查询时，仅经纬度信息会发送至我们的后端服务器（Vercel）和紫外线数据提供商 OpenUV.io。<strong>我们不存储您的位置历史。</strong></li>
-</ul>
-
-<h3>3. 我们不收集的信息</h3>
-<ul>
-<li>❌ 我们不收集姓名、邮箱、电话、账号、密码等任何身份信息</li>
-<li>❌ 我们不收集设备唯一标识符或广告标识符</li>
-<li>❌ 我们不使用任何第三方分析工具（如 Google Analytics、Firebase Analytics）</li>
-<li>❌ 我们不投放广告，不与广告商共享任何数据</li>
-<li>❌ 我们不追踪您在其他应用或网站上的行为</li>
-</ul>
-
-<h2>二、Apple HealthKit（如启用）</h2>
-<p>如果您授权本应用访问 Apple 健康数据，本应用会将估算的维生素D合成量（单位 IU）<strong>写入您 iPhone 的"健康"应用</strong>中"膳食维生素D"项目下。</p>
-<ul>
-<li>本应用<strong>只写入</strong>维生素D数据，不读取您的任何其他健康数据</li>
-<li>健康数据完全保存在您的 iPhone 本地，受 Apple 加密保护</li>
-<li>您可以随时在系统设置 → 健康 → 数据访问 中关闭授权</li>
-<li>我们的服务器永远不会接触到您的健康数据</li>
-</ul>
-
-<h2>三、第三方服务</h2>
-<p>本应用使用以下第三方服务来提供核心功能：</p>
-<table>
-<tr><th>服务</th><th>用途</th><th>接收的数据</th></tr>
-<tr><td>OpenUV.io</td><td>提供实时紫外线指数</td><td>您的经纬度坐标</td></tr>
-<tr><td>Vercel</td><td>我们的后端服务托管商，缓存 UV 数据</td><td>您的经纬度坐标</td></tr>
-</table>
-<p>我们建议您查阅这些服务的隐私政策以了解详情。</p>
-
-<h2>四、数据安全</h2>
-<ul>
-<li>您设备上的所有个人数据通过 iOS / Android 系统级安全机制保护</li>
-<li>与后端服务器的所有通信通过 HTTPS 加密</li>
-<li>我们不存储位置查询历史，每次查询完成后立即丢弃</li>
-</ul>
-
-<h2>五、您的权利</h2>
-<ul>
-<li><strong>访问与删除</strong>：您随时可在应用内"我的条件"页面查看、修改所有本地数据；删除应用即彻底删除所有本地数据</li>
-<li><strong>关闭权限</strong>：您可随时在系统设置中关闭位置、通知、HealthKit 等任何权限</li>
-<li><strong>联系我们</strong>：如有任何隐私问题，请发邮件至 <a href="mailto:wuyang20200000@gmail.com">wuyang20200000@gmail.com</a></li>
-</ul>
-
-<h2>六、儿童隐私</h2>
-<p>本应用不针对 13 岁以下儿童设计。如发现 13 岁以下儿童在使用本应用，监护人可联系我们要求删除任何相关数据。</p>
-
-<h2>七、政策变更</h2>
-<p>如本政策有重大变更，我们会在应用内通知您，并更新本页面顶部的"最后更新"日期。</p>
 
 <h2>八、联系方式</h2>
 <p>如对本隐私政策有任何疑问，请联系：</p>
