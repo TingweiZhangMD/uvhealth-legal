@@ -48,11 +48,12 @@
 <li><strong>Timer session data</strong> (start time, elapsed time) — for session recovery</li>
 <li><strong>Personal sun history</strong> — a record of each timed session of 1 minute or longer (date and time, duration, the skin type and exposed area used, UV index, estimated vitamin D) and each day's UV conditions (location rounded to about 1 degree of latitude/longitude, roughly 100 km) — so you can look back at your own sun exposure and trends in the App</li>
 </ul>
-<p><strong>Important: All of this data is stored only on your device. It is never uploaded to our servers and is never shared with any third party.</strong> You can delete your sun history at any time with "Clear history on this phone" in "Settings &amp; About"; uninstalling the App permanently deletes all of this data. If you use a system backup (such as iCloud Backup), this local data may be included in your own backup along with other app data.</p>
+<p><strong>Important: All of this data is stored only on your device. It is never uploaded to our servers and is never shared with any third party.</strong> You can delete your sun history at any time with "Clear history on this phone" in "Settings &amp; About"; uninstalling the App permanently deletes all of this data. If you use a system backup (such as iCloud Backup on iPhone or Google backup on Android), this local data may be included in your own backup along with other app data.</p>
 
 <h3>1.2 Information Automatically Collected (for Real-Time UV Lookup)</h3>
 <ul>
-<li><strong>Location (latitude/longitude or city)</strong>: used to query the real-time UV index for your area. With each query, only coordinates are sent to our backend (Vercel) and our UV data provider (OpenUV.io). <strong>We do not store your location history.</strong></li>
+<li><strong>Location (latitude/longitude or city)</strong>: used to query the real-time UV index for your area. Before sending, the App rounds your coordinates to 0.1 degree (about 10 km) and sends only this approximate location to our backend (Vercel) and our UV data provider (OpenUV.io). The server caches UV results for each area of about 10 km for up to about an hour so that nearby users share them; it does not record who made the request. <strong>We do not store your location history.</strong></li>
+<li><strong>Location permission is optional</strong>: on Android you can allow "approximate location" only, or deny location and choose a city manually in the App.</li>
 </ul>
 
 <h3>1.3 Anonymous Usage Analytics (You Can Turn This Off)</h3>
@@ -64,7 +65,7 @@
 <li>The App version, the phone's operating system name and version, the device model, and the phone's language/region setting</li>
 <li>Approximate country/region, derived by Aptabase's server from the IP address of the connection — <strong>the IP address itself is not stored</strong></li>
 </ul>
-<p><strong>What is never sent:</strong> your skin type, clothing and exposed body area, hair/scalp choice, photosensitizing medication, vitamin D values, sun time, burn estimates, your coordinates or chosen city, name, email, advertising identifier (IDFA), or device identifier.</p>
+<p><strong>What is never sent:</strong> your skin type, clothing and exposed body area, hair/scalp choice, photosensitizing medication, vitamin D values, sun time, burn estimates, your coordinates or chosen city, name, email, advertising identifier (IDFA on iPhone, advertising ID on Android), or device identifier.</p>
 <p><strong>How Aptabase handles it:</strong> Visitors are distinguished by a hash of the IP address, user agent and a random value that changes every day, so the same person cannot be followed from one day to the next. Data is stored in Aptabase's United States data center and kept for up to 5 years. We do not use this data for advertising, do not sell it, and do not combine it with other data to identify you.</p>
 <p><strong>How to turn it off:</strong> Tap the gear at the top right of any screen → "Settings &amp; About" → switch off "Anonymous usage analytics". It takes effect immediately and nothing further is sent.</p>
 
@@ -77,21 +78,16 @@
 <li>❌ We do not track your activity across other apps or websites</li>
 </ul>
 
-<h2>2. Apple HealthKit (If You Enable It)</h2>
-<p>If you grant the App access to Apple Health, the App will <strong>write</strong> estimated vitamin D synthesis (in IU) into your iPhone's Health app under "Dietary Vitamin D."</p>
-<ul>
-<li>The App <strong>only writes</strong> vitamin D data — it does not read any other health information from you</li>
-<li>Health data stays on your iPhone, protected by Apple's encryption</li>
-<li>You can revoke access anytime in Settings → Health → Data Access</li>
-<li>Our servers never see your health data</li>
-</ul>
+<h2>2. System Health Data (Apple Health / Android Health Connect)</h2>
+<p>The current version <strong>does not read or write</strong> any data in Apple Health (HealthKit) or Android Health Connect.</p>
+<p>If we later add an option to write estimated vitamin D to a health app, we will update this policy first and will write data only after you give permission; our servers will never see that health data.</p>
 
 <h2>3. Third-Party Services</h2>
 <p>The App uses the following third-party services:</p>
 <table>
 <tr><th>Service</th><th>Purpose</th><th>Data Received</th></tr>
-<tr><td>OpenUV.io</td><td>Real-time UV index data</td><td>Your coordinates</td></tr>
-<tr><td>Vercel</td><td>Backend hosting &amp; UV caching</td><td>Your coordinates</td></tr>
+<tr><td>OpenUV.io</td><td>Real-time UV index data</td><td>Approximate location (coordinates rounded to about 10 km)</td></tr>
+<tr><td>Vercel</td><td>Backend hosting &amp; UV caching</td><td>Approximate location (coordinates rounded to about 10 km)</td></tr>
 <tr><td>Aptabase</td><td>Anonymous usage analytics (can be turned off in the App)</td><td>Event name and time, random session number, App version, OS name and version, device model, language/region setting; no location or health data</td></tr>
 </table>
 <p>We encourage you to review these services' privacy policies.</p>
@@ -100,14 +96,14 @@
 <ul>
 <li>All personal data on your device is protected by iOS/Android system-level security</li>
 <li>All communication with our backend and with the analytics service uses HTTPS encryption</li>
-<li>We do not retain location queries — coordinates are discarded immediately after each lookup</li>
+<li>We do not keep a history of location queries; the server only caches UV results for each area of about 10 km for up to about an hour and does not record who made the request</li>
 </ul>
 
 <h2>5. Your Rights</h2>
 <ul>
 <li><strong>Access &amp; Delete</strong>: You can view and change your settings at any time on the "My Conditions" page, and clear your sun history in "Settings &amp; About". Uninstalling the App permanently deletes all local data.</li>
 <li><strong>Turn Off Anonymous Analytics</strong>: Switch off "Anonymous usage analytics" in "Settings &amp; About". It takes effect immediately.</li>
-<li><strong>Revoke Permissions</strong>: You can disable location, notification, or HealthKit access anytime in your device settings.</li>
+<li><strong>Revoke Permissions</strong>: You can turn off location, notification or any other permission at any time in your phone's settings.</li>
 <li><strong>Contact Us</strong>: For any privacy concerns, email <a href="mailto:wuyang20200000@gmail.com">wuyang20200000@gmail.com</a></li>
 </ul>
 
@@ -116,7 +112,11 @@
 
 <h2>7. Changes to This Policy</h2>
 <p>If we make material changes, we will notify you in the App and update the "Last Updated" date above.</p>
-<p>Change log: October 7, 2026 — added "Anonymous Usage Analytics" and "Personal sun history (stored only on your device)".</p>
+<p>Change log:</p>
+<ul>
+<li>October 7, 2026 — added "Anonymous Usage Analytics" and "Personal sun history (stored only on your device)".</li>
+<li>October 7, 2026 (update) — added Android details (approximate-location permission, Google backup, Android advertising ID); clarified that UV lookups send only an approximate location (about 10 km); clarified that the current version does not use Apple Health or Android Health Connect.</li>
+</ul>
 
 <h2>8. Contact</h2>
 <p>For any questions about this Privacy Policy, contact:</p>
